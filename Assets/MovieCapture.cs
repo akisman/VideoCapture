@@ -14,11 +14,8 @@ public class MovieCapture : MonoBehaviour
 
     private int width;
     private int height;
-    private bool isCaptureFramerate = false;
-
-    // 
-    RenderTexture renderTexture;
-    Texture2D texture2D;
+    private RenderTexture renderTexture;
+    private Texture2D texture2D;
 
     void Awake()
     {
