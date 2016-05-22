@@ -49,8 +49,8 @@ public class MovieCapture : MonoBehaviour
         captureCamera.targetTexture = null;
         RenderTexture.active = null;
         Destroy(renderTexture);
-        byte[] bytes = texture2D.EncodeToPNG();
+        byte[] imageBytes = texture2D.EncodeToPNG();
         Destroy(texture2D);
-        System.IO.File.WriteAllBytes(string.Format("{0}/shot{1:D04}.png", targetFolderName, Time.frameCount), bytes);
+        System.IO.File.WriteAllBytes(string.Format("{0}/shot{1:D04}.png", targetFolderName, Time.frameCount), imageBytes);
     }
 }
